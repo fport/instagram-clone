@@ -17,6 +17,10 @@
     padding: 20px;
 }
 
+.post_text strong {
+    margin-right: 10px;
+}
+
 .post__header {
     display: flex;
     align-items: center;
