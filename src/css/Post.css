@@ -31,3 +31,12 @@
 .post__avatar{
     margin-right: 14px;
 }
+
+.post_commentBox {
+    padding:flex;
+    margin-top: 10px;
+}
+
+.post__comments{
+    padding: 20px;
+}

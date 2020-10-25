@@ -5,6 +5,8 @@ import { db, auth } from "./firebase";
 import { Modal, Button, Input } from "@material-ui/core";
 import { makeStyles } from "@material-ui/core";
 import ImageUpload from "./components/ImageUpload";
+import InstagramEmbed from "react-instagram-embed";
+import logo from "./logo.png";
 
 function rand() {
   return Math.round(Math.random() * 20) - 10;
@@ -85,6 +87,8 @@ function App() {
         });
       })
       .catch((error) => alert(error.message));
+
+    setOpen(false);
   };
 
   const signIn = (event) => {
@@ -179,17 +183,44 @@ function App() {
         )}
       </div>
 
-      <h1>Let's build an instagram clone🚀!'</h1>
-
-      {posts.map(({ id, post }) => (
-        <Post
-          key={id}
-          username={post.username}
-          caption={post.caption}
-          imageUrl={post.imageUrl}
-        />
-      ))}
-
+      <div className="app__posts">
+        <div className="app__postLeft">
+          {posts.map(({ id, post }) => (
+            <Post
+              key={id}
+              postId={id}
+              user={user}
+              username={post.username}
+              caption={post.caption}
+              imageUrl={post.imageUrl}
+            />
+          ))}
+        </div>
+        <div className="app__postRight">
+          <div className="info">
+            <img src={logo} alt="deneme" />
+            <h1>Furkan Portakal</h1>
+          </div>
+          <div className="info__upload">
+            <h3>Do you want to upload an image?</h3>
+            <p>
+              After logging in you can add a picture from the bottom of the page
+              🛸.
+            </p>
+            <br />
+            <h5>Did something happen😞</h5>
+            <p>
+              The design is specific to Web users. You may encounter problems on
+              mobile.
+            </p>
+            <br />
+            <h5>Source Code</h5>
+            <a href="https://github.com/FurkanPortakal/instagram-clone">
+              🦉Click🦉
+            </a>
+          </div>
+        </div>
+      </div>
       {user?.displayName ? (
         <ImageUpload username={user.displayName} />
       ) : (

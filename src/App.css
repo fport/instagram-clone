@@ -3,11 +3,48 @@
 }
 
 .app{
-    background-color: #fafafa;
     height:100vh;
 }
 
+.app__posts {
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+.app__postRight{
+    display: flex;
+    flex-direction: column;
+    margin-left: 30px;
+}
+
+.app__postRight img {
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    margin-right: 10px;
+}
+.info{
+    display: flex;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+.info__upload{
+    width: 60%;
+    margin-left: 30px; 
+}
+.info__upload p {
+    color: #8e8e8e;
+}
+
+.info__upload a {
+    text-decoration:none;
+    align-items:center;
+}
+
 .app__header{
+    position:sticky;
+    top:0;
+    z-index:1;
     background-color: #fff;
     padding: 20px;
     border-bottom: 1px solid lightgray; 
@@ -23,4 +60,24 @@
 .app__signup{
     display: flex;
     flex-direction: column;
+}
+
+.post_commentBox{
+    display: flex;
+    margin-top: 10px;
+}
+
+.post__input {
+    flex:1;
+    border:none;
+    padding: 10px;
+    border-top: 1px solid lightgray;
+}
+
+.post__button {
+    flex:0;
+    border:none;
+    color:#6082a3;
+    background-color: transparent;
+    border-top: 1px solid lightgray;
 }
