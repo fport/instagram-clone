@@ -11,10 +11,11 @@
 🚀 Firebase Cloud Database,Auth, Storage  
 🚀 Material-ui  
 
-
+### `git clone https://github.com/FurkanPortakal/instagram-clone.git`  
 In the project directory, you can run:
 
-### `npm install` after 
+### `npm install` 
+after 
 ### `npm start`
 
 Runs the app in the development mode.<br />
